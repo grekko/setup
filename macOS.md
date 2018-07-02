@@ -136,7 +136,8 @@ same one you used to create your GitHub account). It will prompt
 for information. Just press enter until it asks for a **passphrase**.
 
 ```bash
-mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C "TYPE_YOUR_EMAIL@HERE.com"
+export USER_EMAIL="your-email@something.com"
+mkdir -p ~/.ssh && ssh-keygen -t ed25519 -o -a 100 -f ~/.ssh/id_ed25519 -C $USER_EMAIL
 ```
 
 **NB:** when asked for a passphrase, put something you want (and that you'll remember),
